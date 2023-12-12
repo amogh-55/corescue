@@ -1,0 +1,111 @@
+/* src/components/DisasterPrecautions.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000; /* Black background for space theme */
+  margin: 0;
+  overflow-x: hidden;
+  color: #95edfd; /* White text color */
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto; /* Centered container with improved margins */
+  padding: 40px;
+  background-color: #111111; /* Dark background for container */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: #ffcc00; /* Yellowish color for header */
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5rem; /* Adjusted font size */
+  text-decoration: underline; /* Underline text */
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Spacing between buttons */
+  flex-wrap: wrap;
+}
+
+button {
+  margin: 15px;
+  padding: 18px 35px;
+  font-size: 1.2rem; /* Adjusted font size */
+  font-weight: bold;
+  background-color: #0f284b; /* Deep blue color for buttons */
+  color: #ffffff;
+  border: none;
+  border-radius: 25px; /* Rounder buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #32d1e6; /* Darker blue color on hover */
+  transform: scale(1.05); /* Slightly scale on hover */
+}
+
+.precautions {
+  opacity: 0;
+  margin-top: 30px;
+  padding: 25px;
+  background-color: #e6e1e7; /* Dark background for precautions */
+  border: 1px solid #000000;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+  transition: opacity 0.5s ease;
+}
+
+.precautions.active {
+  opacity: 1;
+}
+
+h2 {
+  color: #070708; /* Deep blue color for subheadings */
+  margin-bottom: 20px;
+  font-size: 1.8rem; /* Adjusted font size */
+  text-decoration: underline; /* Underline text */
+}
+
+p {
+  font-weight: bold;
+  font-style: italic; /* Italic text */
+  margin-bottom: 10px;
+  font-size: 1.2rem; /* Adjusted font size */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  color: #de6969; /* Light gray text color for list items */
+  font-weight: bold;
+  font-style: italic; /* Italic text */
+  font-size: 1.2rem; /* Adjusted font size */
+}
+
+/* Page transition animation */
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
